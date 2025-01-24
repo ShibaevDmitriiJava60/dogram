@@ -1,0 +1,101 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: url(../images/dalmatian-spots\ \(1\).svg);
+    margin: 0 0 0 0;
+    
+}
+
+h2{
+    margin:0 0 0 0 ;
+}
+
+.logo{
+    font-size: 5rem;
+    text-align: center;
+    background-color: bisque;
+}    
+
+.main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    height: 85vh;
+}
+
+.detailed{
+    position:relative;
+    width: 90rem;
+    list-style: none;
+    align-self: self-end;
+
+
+}
+
+.detailed--item_image{
+    position: relative;
+    display: block;
+    top: 2.5rem;  
+    left: 3rem;
+    width: 70rem;
+    height: auto;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    /* border: 2px solid lightgrey; */
+    margin-bottom: 3px;
+    z-index: -1;
+    
+}
+
+.detailed--item_title{
+    background-color: bisque;
+    display: block;
+    width: 70rem;
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+.gallery{
+    list-style: none;
+    overflow:auto;
+    min-width: 22rem;
+    max-width: 22rem;
+    height: 85 vh;
+    
+
+}
+
+.gallery--item{
+    border: 2px solid gray;
+    overflow: hidden;
+    min-width: 20rem;
+    max-width: 20rem;
+    margin: 4px;
+    border-radius: 3rem;
+}
+
+.gallery--item:hover {
+    filter: blur(2px);
+    
+}
+
+.gallery--item_image{
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    
+}
+
+.gallery--item_title{
+    display: block;
+    width: 20rem;
+    font-size: 2.5rem;
+    background-color: bisque;
+    text-align: center;
+}
+
+
+
