@@ -5,11 +5,15 @@ html{
 body{
     background: url(../images/dalmatian-spots\ \(1\).svg);
     margin: 0 0 0 0;
-    
+}
+
+header{
+    width: 90vw;
+    margin-left: 5vw;
 }
 
 h2{
-    margin:0 0 0 0 ;
+    margin: 0 0 0 0;
 }
 
 .logo{
@@ -22,7 +26,7 @@ h2{
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
-    height: 85vh;
+    height: 85.5vh;
 }
 
 .detailed{
@@ -39,7 +43,7 @@ h2{
     display: block;
     top: 2.5rem;  
     left: 3rem;
-    width: 70rem;
+    width: 100vh;
     height: auto;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     /* border: 2px solid lightgrey; */
@@ -51,7 +55,7 @@ h2{
 .detailed--item_title{
     background-color: bisque;
     display: block;
-    width: 70rem;
+    width: 40vw;
     font-size: 4rem;
     text-align: center;
 
@@ -98,4 +102,109 @@ h2{
 }
 
 
+@media (orientation:landscape) {
+    header{
+        height: 15vh;
+    }
 
+    .logo{
+        font-size:  3rem ;
+    }
+
+    .gallery--item{
+        min-width: 15rem;
+        max-width: 15rem;
+
+        margin: 4px;
+        border-radius: 3rem;
+    }
+
+    .gallery--item_image{
+        display: block;
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        
+    }
+    
+    .gallery--item_title{
+        display: block;
+        width: 15rem;
+        font-size: 2.5rem;
+        background-color: bisque;
+        text-align: center;
+    }
+
+}
+
+@media (orientation:portrait) {
+    header{
+        height: 10vh;
+    }
+    .main{
+        flex-direction: column;
+        height: 90vh;
+
+    }
+
+    .detailed{
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .detailed--item_image{
+        height:27vh;
+        width: auto;
+        left: 10vw;
+    }
+
+    .detailed--item_title{
+        width: 70vw;
+        font-size: 8vw;
+    }
+
+    .gallery{
+        display: flex;
+        padding: 0 0 0 0;
+        margin-left: 10vw;
+        min-width: 80vw;
+        max-width: 80vw;
+        height: 50vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: auto ;
+    }
+
+    .gallery--item{
+        border: 2px solid gray;
+        overflow: hidden;
+        min-width: 20vw;
+        max-width: 20vw;
+        margin: 2.5vw;
+        border-radius: 3rem;
+    }
+    
+    .gallery--item:hover {
+        filter: blur(2px);
+        
+    }
+    
+    .gallery--item_image{
+        display: block;
+        width: 20vw;
+        height: 20vw;
+        object-fit: cover;
+        
+    }
+
+    .gallery--item_title{
+        display: block;
+        width: 20vw;
+        font-size: 1rem;
+        background-color: bisque;
+        text-align: center;
+    }
+    
+    
+}
