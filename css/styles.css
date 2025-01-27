@@ -23,6 +23,10 @@ h2{
     font-size: 8vh;
     text-align: center;
     background-color: bisque;
+    font-family: Lakeshore;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: -1rem;
 }    
 
 .main{
@@ -30,13 +34,14 @@ h2{
     flex-direction: row-reverse;
     justify-content: left;
     height: 85.5vh;
+        overflow: hidden;
 }
 
 .detailed{
     position:relative;
     width: 90rem;
     list-style: none;
-    align-self: self-end;
+    /* align-self: self-end; */
 
 
 }
@@ -49,7 +54,6 @@ h2{
     width: 100vh;
     height: auto;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    /* border: 2px solid lightgrey; */
     margin-bottom: 3px;
     z-index: -1;
     
@@ -58,10 +62,25 @@ h2{
 .detailed--item_title{
     background-color: bisque;
     display: block;
-    width: 40vw;
-    font-size: 4rem;
+    width: 50ch;
+    font-family: Airstream;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 3rem;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 
+}
+
+.detailed--item_title:hover{
+    position: relative;
+    bottom: 11rem;
+    white-space: initial;
+    overflow: visible;
+    text-overflow:none;
+    
 }
 
 .gallery{
@@ -103,6 +122,8 @@ h2{
     background-color: bisque;
     text-align: center;
     font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 
@@ -110,22 +131,33 @@ h2{
     header{
         height: 15vh;
     }
-    /* body{
+    body{
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-    } */
+    }
 
     .logo{
-        font-size:  8vh ;
+        letter-spacing: -0.8rem;
+    }
+
+    .detailed--item_title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+
+    .detailed--item_title:hover{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        
     }
 
     .gallery--item{
         min-width: 15rem;
         max-width: 15rem;
-
         margin: 4px;
-        border-radius: 3rem;
     }
 
     .gallery--item_image{
@@ -150,15 +182,18 @@ h2{
     header{
         height: 10vh;
     }
-/* 
-    body{
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    } */
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
 
     .logo{
+        font-family: Lakeshore;
         font-size: 4.5vh;
+        font-weight: bold;
+        font-style: normal;
     }
     .main{
         flex-direction: column;
@@ -170,6 +205,12 @@ h2{
         position: relative;
         width: 100vw;
         height: 40vh;
+        align-content: center;
+    }
+
+    .detailed--item{
+        width: 60vw;
+        justify-content: center;
     }
 
     .detailed--item_image{
@@ -179,17 +220,28 @@ h2{
     }
 
     .detailed--item_title{
-        width: 70vw;
+        width: 64vw;
         font-size: 8vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        
+    }
+
+    .detailed--item_title:hover{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        
     }
 
     .gallery{
         display: flex;
         padding: 0 0 0 0;
         margin-left: 10vw;
-        min-width: 80vw;
+        min-width: 75vw;
         max-width: 80vw;
-        height: 50vh;
+        height: 40vh;
         flex-direction: row;
         flex-wrap: wrap;
         overflow: auto ;
@@ -201,7 +253,6 @@ h2{
         min-width: 20vw;
         max-width: 20vw;
         margin: 2.5vw;
-        border-radius: 3rem;
     }
     
     .gallery--item:hover {
